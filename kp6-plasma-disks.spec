@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.2.2
+%define		kdeplasmaver	6.2.3
 %define		qtver		5.15.2
 %define		kpname		plasma-disks
 %define		kf6ver		5.39.0
 
 Summary:	plasma-disks
 Name:		kp6-%{kpname}
-Version:	6.2.2
+Version:	6.2.3
 Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	4c82b1915fd9705d7e06248b4ec9ae6b
+# Source0-md5:	29e3fcd5c49f5594e5877e02b04a1605
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= 5.15.0
 BuildRequires:	Qt6Gui-devel >= 5.15.0
