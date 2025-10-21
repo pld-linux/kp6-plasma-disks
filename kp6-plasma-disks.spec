@@ -1,19 +1,19 @@
 #
 # Conditional build:
 %bcond_with	tests		# build with tests
-%define		kdeplasmaver	6.4.5
+%define		kdeplasmaver	6.5.0
 %define		qtver		5.15.2
 %define		kpname		plasma-disks
 %define		kf6ver		5.39.0
 
 Summary:	plasma-disks
 Name:		kp6-%{kpname}
-Version:	6.4.5
-Release:	2
+Version:	6.5.0
+Release:	1
 License:	LGPL v2.1+
 Group:		X11/Libraries
 Source0:	https://download.kde.org/stable/plasma/%{kdeplasmaver}/%{kpname}-%{version}.tar.xz
-# Source0-md5:	405ec161c4afb037b397dee2d7f68a86
+# Source0-md5:	4dd08e8233e599a893598c34c0079d88
 URL:		http://www.kde.org/
 BuildRequires:	Qt6Core-devel >= 5.15.0
 BuildRequires:	Qt6Gui-devel >= 5.15.0
@@ -76,12 +76,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %files -f %{kpname}.lang
 %defattr(644,root,root,755)
-%attr(755,root,root) %{_libdir}/qt6/plugins/kf6/kded/smart.so
+%{_libdir}/qt6/plugins/kf6/kded/smart.so
 %{_datadir}/dbus-1/system-services/org.kde.kded.smart.service
 %{_datadir}/dbus-1/system.d/org.kde.kded.smart.conf
 %{_datadir}/metainfo/org.kde.plasma.disks.metainfo.xml
 %{_datadir}/polkit-1/actions/org.kde.kded.smart.policy
-%attr(755,root,root) %{_libdir}/qt6/plugins/plasma/kcms/kinfocenter/kcm_disks.so
+%{_libdir}/qt6/plugins/plasma/kcms/kinfocenter/kcm_disks.so
 %attr(755,root,root) %{_prefix}/libexec/kf6/kauth/kded-smart-helper
 %{_desktopdir}/kcm_disks.desktop
 %{_datadir}/knotifications6/org.kde.kded.smart.notifyrc
