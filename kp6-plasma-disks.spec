@@ -42,7 +42,10 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %define		qt5dir		%{_libdir}/qt5
 
 %description
-plasma-disks.
+Monitors S.M.A.R.T. capable devices for imminent failure.
+
+%description -l pl.UTF-8
+Monitoruje urządzenia wspierające S.M.A.R.T.
 
 %prep
 %setup -q -n %{kpname}-%{version}
